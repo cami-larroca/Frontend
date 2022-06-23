@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*
+    --nombre-variable: valor;  => definicion
+    propiedad: var(--nombre-variable)
+  */
+  --color-primario: #f0a83e;
+  --color-secundario: #3c2313;
+  --color-terciario: #8a8787;
+  --padding-gral: 12px 10px 10px 5px;
+  --imagen-principal: url("");
+  --fuente-principal: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 1rem => 10px*/
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: 1.6rem;
+}
+
+
+.header {
+  background-color: var(--color-primario);
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  max-height: 54px;
+  width: 100%;
+}
+.header__logo {
+  margin: 1.7rem;
+  max-width: 132px;
+}
+.header__menu {
+  display: none;
+  /* visibility: hidden;*/
+}
+.header__menu-mobile {
+  margin: 1.9rem;
+  max-width: 20px;
+}
+
+.banner {
+  align-items: flex-end;
+  background-image: url("../images/bg_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  height: 440px;
+}
+.banner__title {
+  align-self: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 2.5rem;
+  padding: 1.2rem 3.8rem;
+}
+.banner p {
+  margin-right: 2.8rem;
+  text-align: center;
+}
+.banner a {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1.5rem 2.3rem;
+  margin-right: 5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*desktop*/
+/*@media screen and (min-width: 800px) {
+  .banner {
+    background-image: url("../images/bg_desktop.png");
+  }
+  .banner__title {
+    align-self: flex-end;
+    margin-right: 2rem;
+  }
+  .header__menu {
+    display: block;
+  }
+  .header__menu-mobile {
+    display: none;
+  }
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.9rem;
+  }
+  .menu__item a{
+    color: white;
+    text-decoration: none;
+  }
+}*/
